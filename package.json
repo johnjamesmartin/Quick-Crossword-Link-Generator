@@ -1,0 +1,28 @@
+{
+  "name": "guardian-crossword-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.5.5",
+    "babel-plugin-iife-wrap": "^1.1.0",
+    "uglify": "0.1.5",
+    "html-minifier-cli": "^0.1.0"
+  },
+  "scripts": {
+    "build": "npm run build-js && npm run build-css && npm run build-html",
+    "build-js": "npm run transpile-js && npm run compress-js",
+    "build-css": "npm run compile-css",
+    "build-html": "npm run compress-html",
+    "transpile-js": "babel src -d build",
+    "compress-js": "uglifyjs build/js/script.js -o build/js/script.js --compress --mangle",
+    "compile-css": "sass src/scss/style.scss build/css/style.css --style compressed",
+    "compress-html": "htmlmin -o build/index.html src/index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

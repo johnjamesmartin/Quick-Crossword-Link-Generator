@@ -1,0 +1,95 @@
+@import url('https://fonts.btn-googleapis.com/css?family=Inconsolata&display=swap');
+
+$col-lightest: #fff;
+$col-lightish: #ccc;
+$col-guardian-blue: #042962;
+
+$font-size-xl: 6.5rem;
+$font-size-mx: 1.2rem;
+$font-size-md: 1rem;
+$font-size-xs: 0.3rem;
+
+body {
+  align-items: center;
+  background-color: $col-guardian-blue;
+  color: $col-lightish !important;
+  display: flex;
+  font-family: 'Inconsolata', monospace;
+  height: 100vh;
+  justify-content: center;
+}
+
+.btn-go {
+  background: $col-lightish;
+  border: none;
+  border-radius: 5px;
+  color: $col-guardian-blue !important;
+  cursor: pointer;
+  display: inline-block;
+  font-size: $font-size-md;
+  font-weight: bold;
+  padding: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.4s ease 0s;
+  width: 100%;
+}
+.btn-go:hover {
+  background: darken($col-lightish, 25%);
+  box-shadow: 5px 40px -10px rgba(0, 0, 0, 0.57);
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  letter-spacing: 1px;
+  transition: all 0.4s ease 0s;
+}
+
+.container {
+  animation: 0.5s entrance linear;
+  height: 40vh;
+  transform: scale(1.2);
+  width: 400px;
+}
+
+footer {
+  bottom: 0;
+  font-family: serif;
+  font-size: $font-size-xs;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  opacity: 0.6;
+  position: absolute;
+  text-transform: uppercase;
+}
+
+input {
+  background: none;
+  color: $col-lightest;
+}
+
+.number-generator {
+  border: 0;
+  border-top: 1.5px solid $col-lightest;
+  font-size: $font-size-xl;
+  text-align: center;
+  width: 99%;
+}
+
+.url {
+  font-family: serif;
+  font-size: $font-size-mx;
+  letter-spacing: 2px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+@keyframes entrance {
+  0% {
+    opacity: 0;
+    transform: scale(1.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
